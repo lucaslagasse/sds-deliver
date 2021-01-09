@@ -19,7 +19,7 @@ public class OrderService {
 	
 	@Transactional(readOnly = true)
 	public List<OrderDTO> findAll(){
-		List<Order> listOrders = orderRepository.findAll();
+		List<Order> listOrders = orderRepository.findAllOrdersWithProducts();
 		return listOrders.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList());
 	}
 
