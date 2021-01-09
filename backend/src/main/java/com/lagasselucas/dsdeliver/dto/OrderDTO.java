@@ -13,6 +13,7 @@ public class OrderDTO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	private Long id;
 	private String address;
 	private Double latitude;
 	private Double longitude;
@@ -28,7 +29,8 @@ public class OrderDTO implements Serializable{
 	}
 	
 	
-	public OrderDTO(String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
+	public OrderDTO(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
+		this.id = id;
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
@@ -37,12 +39,24 @@ public class OrderDTO implements Serializable{
 	}
 	
 	public OrderDTO(Order entity) {
+		id = entity.getId();
 		address = entity.getAddress();
 		latitude = entity.getLatitude();
 		longitude = entity.getLatitude();
 		moment = entity.getMoment();
 		status = entity.getStatus();
 		products = entity.getProducts().stream().map(x -> new ProductDTO(x)).collect(Collectors.toList());
+	}
+
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 
