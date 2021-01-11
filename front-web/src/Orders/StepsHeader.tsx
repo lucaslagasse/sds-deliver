@@ -1,3 +1,4 @@
+
 function StepsHeader() {
     return (
         <header className="orders-steps-container">
@@ -8,7 +9,7 @@ function StepsHeader() {
                 <ul className="steps-items">
                     <li>
                         <span className="steps-number">1</span>
-                        Selecione os produtos e localização
+                        Selecione os produtos e localização.
                     </li>
                     <li>
                         <span className="steps-number">2</span>
@@ -17,7 +18,7 @@ function StepsHeader() {
                 </ul>
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default StepsHeader;

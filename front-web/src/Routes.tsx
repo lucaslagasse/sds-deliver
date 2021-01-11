@@ -1,12 +1,12 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./Home";
-import Navbar from "./Navbar";
-import Orders from "./Orders";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Navbar from './Navbar';
+import Orders from './Orders';
 
 function Routes() {
     return (
         <BrowserRouter>
-            <Navbar />
+            <Navbar></Navbar>
             <Switch>
                 <Route path="/orders">
                     <Orders />
@@ -16,7 +16,7 @@ function Routes() {
                 </Route>
             </Switch>
         </BrowserRouter>
-    )    
-}
+    )
+};
 
 export default Routes;
