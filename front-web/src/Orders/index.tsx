@@ -11,7 +11,6 @@ import { OrderLocationData, Product } from './types';
 import './styles.css';
 
 
-
 function Orders() {
     const [products, setProducts] = useState<Product[]>([]);
     const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
